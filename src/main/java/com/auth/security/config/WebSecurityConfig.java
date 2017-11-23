@@ -1,4 +1,4 @@
-package com.auth;
+package com.auth.security.config;
 
 import com.auth.security.jwt.JwtAuthenticationEntryPoint;
 import com.auth.security.jwt.JwtAuthenticationTokenFilter;
@@ -41,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Autowired
+    @Bean
     public JwtAuthenticationTokenFilter authenticationTokenFilter() throws Exception {
         return new JwtAuthenticationTokenFilter();
     }
@@ -63,10 +63,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(
                         HttpMethod.GET,
                         "/",
-                        "/v2/api-docs",
-                        "/webjars/**",
-                        "/swagger-resources/**",
-                        "/configuration/**",
+                        "/v2/api-docs",                     // swagger
+                        "/webjars/**",                      // swagger-ui webjars
+                        "/swagger-resources/**",            // swagger-ui resources
+                        "/configuration/**",                // swagger configuration
                         "/*.html",
                         "/favicon.ico",
                         "/**/*.html",

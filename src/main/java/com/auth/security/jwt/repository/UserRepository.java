@@ -1,6 +1,6 @@
 package com.auth.security.jwt.repository;
 
-import com.auth.model.security.User;
+import com.auth.security.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;

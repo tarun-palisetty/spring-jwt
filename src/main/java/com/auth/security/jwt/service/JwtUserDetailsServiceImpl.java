@@ -1,6 +1,6 @@
 package com.auth.security.jwt.service;
 
-import com.auth.model.security.User;
+import com.auth.security.model.User;
 import com.auth.security.jwt.JwtUserFactory;
 import com.auth.security.jwt.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class JwtUserDetailsServiceImpl implements UserDetailsService {

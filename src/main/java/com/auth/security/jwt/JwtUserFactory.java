@@ -1,7 +1,7 @@
 package com.auth.security.jwt;
 
-import com.auth.model.security.Authority;
-import com.auth.model.security.User;
+import com.auth.security.model.Authority;
+import com.auth.security.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
